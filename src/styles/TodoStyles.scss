@@ -1,0 +1,31 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.todo-list{
+  border: 1px solid #333;
+  width: 100%;
+
+  div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+.todo {
+  background: #3333;
+  width: 40%;
+  margin: 1%;
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
