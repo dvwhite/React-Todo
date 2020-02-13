@@ -16,7 +16,7 @@ const todos = [
     completed: false
   },
   {
-    task: 'Walk the flerken',
+    task: 'Walk the dog',
     id: 1528817084562,
     completed: false
   }
@@ -102,7 +102,7 @@ class App extends React.Component {
           clearCompleted={this.clearCompleted}
           newTodo={this.addTodo}
         />
-        <div class='footer'></div>
+        <div className='footer'></div>
       </div>
     );
   }
