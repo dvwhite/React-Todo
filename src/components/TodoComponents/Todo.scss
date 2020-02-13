@@ -1,6 +1,14 @@
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+.app {
   background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 55%;
+  border: 1px solid darkgray;
 }
 
 // \todo styles
@@ -8,13 +16,14 @@ body {
 .todo-list{
   border: 1px solid #333;
   background: rgb(56, 138, 219);
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .todo {
   background: whitesmoke;
   border-color: rgb(102, 102, 102);
+  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px,
               rgba(0, 0, 0, 0.12) 0px 2px 2px, 
               rgba(0, 0, 0, 0.12) 0px 4px 4px, 
@@ -37,7 +46,6 @@ body {
 
     p {
       font-weight: bold;
-      transform: scale(1.1);
     }
   }
 }
@@ -51,25 +59,19 @@ body {
 // Form styles
 
 button {
-  background-color: whitesmoke;
+  background-color: rgb(231, 229, 229);
   border: 0;
   box-shadow: 2px 4px 6px #444;
   margin: 1%;
   padding: 1%;
   font-size: 1rem;
-}
+  border-radius: 5px;
+  outline: 0;
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgb(56, 138, 219);
-}
-
-.app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  &:active {
+    box-shadow: 0 2px #333;
+    transform: translateY(3px);
+  }
 }
 
 form {
@@ -83,4 +85,7 @@ input {
   padding: 1%;
   width: 100%;
   font-size: 1rem;
+  border-radius: 5px;
+  outline: 0;
+  border: 0.75 px solid #A9A9A9;
 }

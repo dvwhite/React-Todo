@@ -19,18 +19,21 @@ class TodoForm extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    this.props.addTodo(event, this.state.text)
-    event.target.reset(); // Clear form on submit
+    if (this.state.text) {
+      this.props.addTodo(event, this.state.text)
+      this.setState({...this.state, text: ''})
+      event.target.reset(); // Clear form on submit
+    }
   };
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input type="text" name="text" onChange={this.handleChange}></input>
-        <button>Add Item</button>
+        <input type="text" name="text" onChange={this.handleChange} placeholder='Something needing doing...'></input>
+        <button>Add Todo</button>
       </form>
     )
-  }
+  };
 }
 
 export default TodoForm;
