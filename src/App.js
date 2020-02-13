@@ -1,6 +1,6 @@
 import React from 'react';
 import TodoList from './components/TodoComponents/TodoList';
-import './styles/TodoStyles.scss';
+import './components/TodoComponents/Todo.scss';
 
 const todos = [
   {
