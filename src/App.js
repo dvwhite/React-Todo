@@ -50,7 +50,8 @@ class App extends React.Component {
     event.preventDefault();
 
     this.setState({
-      todos: [...todos.filter(todo => !todo.completed)]
+      ...this.state,
+      todos: [...this.state.todos.filter(todo => !todo.completed)]
     })
   }
 
