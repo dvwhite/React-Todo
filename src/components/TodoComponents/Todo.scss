@@ -20,6 +20,14 @@ body {
               rgba(0, 0, 0, 0.12) 0px 4px 4px, 
               rgba(0, 0, 0, 0.12) 0px 8px 8px, 
               rgba(0, 0, 0, 0.12) 0px 16px 16px;
+
+  @media (max-width: 800px) {
+    width: 80%;
+  }
+
+  @media (max-width: 600px) {
+    width: 95%;
+  }
 }
 
 // \todo styles
@@ -107,7 +115,15 @@ form {
   display: flex;
   flex-direction: row;
   margin: 1%;
-  width: 50%;
+  width: 60%;
+
+  @media (max-width: 800px) {
+    width: 80%;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 }
 
 input {
