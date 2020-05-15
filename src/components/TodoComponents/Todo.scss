@@ -1,0 +1,143 @@
+// Variables
+$completed-green: #32BEA6;
+
+// Styles
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.app {
+  background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 55%;
+  border: 1px solid darkgray;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px,
+              rgba(0, 0, 0, 0.12) 0px 2px 2px, 
+              rgba(0, 0, 0, 0.12) 0px 4px 4px, 
+              rgba(0, 0, 0, 0.12) 0px 8px 8px, 
+              rgba(0, 0, 0, 0.12) 0px 16px 16px;
+
+  @media (max-width: 800px) {
+    width: 80%;
+  }
+
+  @media (max-width: 600px) {
+    width: 95%;
+  }
+}
+
+// \todo styles
+
+.todo-list{
+  // background: rgb(56, 138, 219);
+  background: white;
+  border: 1px solid gray;
+  width: 99.5%;
+  margin: 0 auto;
+}
+
+.todo {
+  background: white;
+  border-color: rgb(102, 102, 102);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px,
+              rgba(0, 0, 0, 0.12) 0px 2px 2px, 
+              rgba(0, 0, 0, 0.12) 0px 4px 4px, 
+              rgba(0, 0, 0, 0.12) 0px 8px 8px, 
+              rgba(0, 0, 0, 0.12) 0px 16px 16px;
+  width: 98%;
+  margin: 1%;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.4 ease;
+
+  p {
+    padding: 2%;
+    word-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  &:hover {
+    transition: all 0.4 ease;
+    background: rgb(192, 233, 247);
+
+    p {
+      font-weight: bold;
+    }
+  }
+}
+
+.completed {
+  opacity: 0.9;
+  background-color: rgb(197, 241, 197);
+  font-style: italic;
+  border: 2px solid $completed-green;
+}
+
+.checkmark-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 1%;
+}
+
+.checkmark {
+  z-index: 10;
+  font-size: 3rem;
+  font-weight: bold;
+  color: $completed-green;
+  margin-right: 1rem;
+}
+
+// Form styles
+
+button {
+  background-color: rgb(231, 229, 229);
+  border: 0;
+  box-shadow: 2px 4px 6px #444;
+  margin: 1%;
+  padding: 1%;
+  font-size: 1rem;
+  border-radius: 5px;
+  outline: 0;
+
+  &:active {
+    box-shadow: 0 2px #333;
+    transform: translateY(3px);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  margin: 1%;
+  width: 60%;
+
+  @media (max-width: 800px) {
+    width: 80%;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
+}
+
+input {
+  padding: 1%;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 5px;
+  outline: 0;
+  border: 0.75 px solid #A9A9A9;
+}
+
+.footer {
+  height: 2rem;
+  width: 100%;
+  border-radius: 5px;
+  background: whitesmoke;
+}
